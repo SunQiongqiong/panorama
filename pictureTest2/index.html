@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>基于Three.js的360X180度全景图</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	
+</head>
+<body>
+
+	<div id="container"></div>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/photo-sphere-viewer.js"></script>
+	<script type="text/javascript">
+
+			var div = document.getElementById('container');
+
+			var PSV = new PhotoSphereViewer({
+				panorama: './images/snow.jpg',
+				container: div,
+				navbar: false,
+				time_anim: 1000,
+				anim_speed: '0.3rpm',
+				size: {
+					width: '100%',
+					height: '800px'
+				}
+			});
+
+	</script>
+
+</body>
+</html>
